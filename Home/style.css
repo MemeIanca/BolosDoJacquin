@@ -5,6 +5,7 @@
     font-family: "Bellota", system-ui;
 }
 
+
 .acessivel {
     position: absolute;
     width: 1px;
@@ -14,11 +15,47 @@
     white-space: nowrap;
 }
 
+body {
+    background-color: #fff6E8;
+}
+
+.main_home {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.secao_logo {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .secao_logo svg {
     width: 240px;
+    margin-top: 50px;
+}
+
+.secao_logo img {
+    width: 300px;
+}
+
+
+/* CARDS */
+
+.secao_cards {
+    width: calc(100% - 360px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
 }
 
 .card {
+    margin: 50px 0;
     width: 260px;
     height: 360px;
     text-decoration: none;
@@ -46,6 +83,88 @@
     width: 150px;
 }
 
-.card_cerimonias{
-    background: linear-gradient(180deg,rgba(20, 30, 141, 1) 0%, rgba(34, 51, 243, 1) 100%);
+.card_cerimonias {
+    background: linear-gradient(180deg, rgba(20, 30, 141, 1) 0%, rgba(34, 51, 243, 1) 100%);
+}
+
+.card_morango {
+    background: linear-gradient(180deg, rgba(111, 2, 2, 1) 0%, rgba(213, 4, 4, 1) 100%);
+}
+
+.card_natal {
+    background: linear-gradient(180deg, rgba(21, 96, 2, 1) 0%, rgba(43, 198, 5, 1) 100%);
+}
+
+.card_coco {
+    background: linear-gradient(180deg, rgba(210, 119, 119, 1) 0%, rgba(108, 61, 61, 1) 100%);
+}
+
+.card_destaques {
+    background: linear-gradient(180deg, rgba(74, 2, 92, 1) 0%, rgba(156, 5, 194, 1) 100%);
+}
+
+.whatsapp {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: transform 0.5s ease-in-out,
+        filter 0.5s ease-in-out;
+}
+
+.whatsapp img {
+    width: 80px;
+    filter: drop-shadow(0 5px 1px #00000025);
+}
+
+.whatsapp:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 1px #00000025);
+}
+
+/* RODAPE */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #ffd188;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-family: "Julius Sans One", sans-serif;
+    text-align: center;
+}
+
+
+
+/* MEDIA */
+@media screen and (max-width: 1050px) {
+    .main_home {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    .secao_logo {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .secao_logo svg {
+        position: absolute;
+        top: 230px;
+        background-color: #ffd188;
+        padding: 20px 40px;
+        border-radius: 20px;
+        box-shadow: 0 4px 4px 2px #00000025;
+    }
+
+    .secao_logo img {
+        width: 150px;
+    }
+
+    .secao_cards {
+        width: 100%;
+    }
 }
